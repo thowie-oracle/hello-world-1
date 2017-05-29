@@ -4,7 +4,11 @@ build:
   base-path: /go/src/github.com/wercker/hello-world
   steps:
     - script:
-        name: go build
+        name: Get app dependencies
+        code: go get
+
+    - script:
+        name: Build application
         code: go build
 
 push-quay:
@@ -13,7 +17,7 @@ push-quay:
         repository: $DOCKER_REPO
         username: $DOCKER_USERNAME
         password: $DOCKER_PASSWORD
-        registry: quay.io
+        registry: https://quay.io
         tag: $WERCKER_GIT_COMMIT
         working-dir: /pipeline/source
         ports: "8080"
