@@ -1,5 +1,5 @@
 box: golang:1.8
-
+# example comment
 build:
   base-path: /go/src/github.com/wercker/hello-world
   steps:
