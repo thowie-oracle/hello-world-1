@@ -13,7 +13,7 @@ build:
 push-release:
   steps:
     - internal/docker-push:
-      tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
+        tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
         working-dir: /pipeline/source
         ports: "8080"
         cmd: ./hello-world
