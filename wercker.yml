@@ -34,6 +34,6 @@ deploy-to-cluster:
         name: deploy to kubernetes
         server: $KUBERNETES_MASTER
         username: $KUBERNETES_USERNAME
-        password: $KUBERNETES_PASSWORD
+        token: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
         command: apply -f kubernetes.yml
