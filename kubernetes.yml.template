@@ -23,6 +23,8 @@ spec:
         - name: hello-world
           containerPort: 8080
           protocol: TCP
+      imagePullSecrets:
+        - name: wercker          
 ---
 apiVersion: v1
 kind: Service
