@@ -10,7 +10,7 @@ build:
         name: Build application
         code: go build
 
-push-quay:
+push-release:
   steps:
     - internal/docker-push:
         tag: $WERCKER_GIT_COMMIT
@@ -18,7 +18,7 @@ push-quay:
         ports: "8080"
         cmd: ./hello-world
 
-deploy-to-kubernetes:
+deploy-to-cluster:
     box:
         id: alpine
         cmd: /bin/sh
