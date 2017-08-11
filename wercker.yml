@@ -1,5 +1,4 @@
 box: golang:1.8
-# example comment
 build:
   base-path: /go/src/github.com/wercker/hello-world
   steps:
@@ -11,19 +10,15 @@ build:
         name: Build application
         code: go build
 
-push-quay:
+push-release:
   steps:
     - internal/docker-push:
-        repository: $DOCKER_REPO
-        username: $DOCKER_USERNAME
-        password: $DOCKER_PASSWORD
-        registry: https://quay.io
         tag: $WERCKER_GIT_COMMIT
         working-dir: /pipeline/source
         ports: "8080"
         cmd: ./hello-world
 
-deploy-to-kubernetes:
+deploy-to-cluster:
     box:
         id: alpine
         cmd: /bin/sh
