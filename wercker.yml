@@ -1,4 +1,6 @@
 box: golang:1.8
+services:
+  -   wcr.io/wercker/build-system-test
 build:
   base-path: /go/src/github.com/wercker/hello-world
   steps:
