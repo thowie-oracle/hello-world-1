@@ -1,4 +1,6 @@
 box: golang:1.8
+services:
+  - registry-alpha.oracledx.com/mies/backend-demo
 build:
   base-path: /go/src/github.com/wercker/hello-world
   steps:
