@@ -18,7 +18,7 @@ push-release:
         ports: "8080"
         cmd: ./hello-world
         
-inject-secret
+inject-secret:
 box:
         id: alpine
         cmd: /bin/sh
