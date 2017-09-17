@@ -27,8 +27,8 @@ inject-secret:
     
     - bash-template
     
-     - kubectl:
-        name: deploy secret
+    - kubectl:
+        name: remove secret
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
