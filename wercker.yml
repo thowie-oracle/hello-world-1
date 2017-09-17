@@ -29,7 +29,7 @@ box:
     - kubectl
         name: deploy secret
         server: $KUBERNETES_MASTER
-        token: $KUBERNETES_PASSWORD
+        token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
         command: create secret docker-registry wercker --docker-server=$DOCKER_REGISTRY --docker-username=$DOCKER_USERNAME --docker-password=$KUBERNETES_TOKEN --docker-email=$DOCKER_EMAIL
 
