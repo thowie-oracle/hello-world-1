@@ -25,13 +25,6 @@ inject-secret:
         cmd: /bin/sh
     steps:
     
-    
-   # - kubectl:
-    #    name: remove secret
-     #  token: $KUBERNETES_TOKEN
-      #  insecure-skip-tls-verify: true
-       # command: delete secret wercker
-    
     - kubectl:
         name: deploy secret
         server: $KUBERNETES_MASTER
