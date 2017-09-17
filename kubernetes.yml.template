@@ -42,16 +42,16 @@ spec:
     commit: ${WERCKER_GIT_COMMIT}
   type: LoadBalancer
 ---
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: hello-world-ingress
-spec:
-  rules:
-  - host: hello-world.example.domain
-    http:
-      paths:
-      - path:
-        backend:
-          serviceName: hello-world
-          servicePort: 8080
+#apiVersion: extensions/v1beta1
+#kind: Ingress
+#metadata:
+ # name: hello-world-ingress
+#spec:
+ # rules:
+  #- host: hello-world.example.domain
+   # http:
+    #  paths:
+     # - path:
+      #  backend:
+       #   serviceName: hello-world
+        #  servicePort: 8080
